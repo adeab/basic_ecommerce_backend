@@ -17,18 +17,22 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::group([
- 
-    'middleware' => 'api',
-  
- ], function ($router) {
-  
-    Route::post('login', 'AuthController@login');
-    Route::post('logout', 'AuthController@logout');
-    Route::post('refresh', 'AuthController@refresh');
-    Route::post('me', 'AuthController@me');
+//register and login
+ Route::post('users', 'UserController@store');
+ Route::post('login', 'AuthController@login');
 
-    Route::post('users', 'UserController@store');
-    Route::get('users', 'UserController@index');
- });
+ //jwt token authorized route
+ Route::group([
+    'middleware' => ['api','jwt.verify'],
+], function ($router) {
+
+    //logout
+    Route::post('logout', 'AuthController@logout');
+    
+    
+    
+    // Route::post('refresh', 'AuthController@refresh');
+    // Route::post('me', 'AuthController@me');
+    // Route::get('users', 'UserController@index');
+});
 
