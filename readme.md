@@ -1,17 +1,22 @@
-<h4>A simple <strong>ecommerce backend</strong> with the basic functionalites. Made with <strong>Laravel 5.8.</strong> </h4>
-<br>
-<p><strong>Step 1:</strong> Download or clone the repository.</p>
-<p><strong>Step 2:</strong> Create a database and add a <strong>.env</strong> file modified as per your created database configuration. </p>
-<p><strong>Step 3:</strong> Update the composer to install necessary dependancies</p>
-```
-composer update
-```
-<p><strong>Step 4:</strong> Run migration to create the tables in your database</p>
-```
-php artisan migrate
-```
-<p><strong>Step 5:</strong> You can seed the products table with fake data if you want</p>
-```
-php artisan db:seed
-```
-<p><strong>Step ?:</strong></p>
+# Basic Ecommerce Backend
+
+### A simple **ecommerce backend** with the basic functionalites with REST apis. Made with **Laravel 5.8**. Work For an assignment
+
+
+## Setting Up the project:
+
+**Step 1:** Download or clone the repository.
+
+**Step 2:** Create a database and add a **.env** file modified as per your created database configuration.
+
+**Step 3:** Update the composer to install necessary dependancies
+> composer update
+
+**Step 4:** Run migration to create the tables in your database
+> php artisan migrate
+
+**Step 5:** You can seed the products table with fake data if you want
+> php artisan db:seed
+
+
+## APIs
