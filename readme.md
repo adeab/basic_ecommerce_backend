@@ -15,7 +15,7 @@
 **Step 4:** Run migration to create the tables in your database
 > php artisan migrate
 
-**Step 5:** You can seed the products table with fake data if you want
+**Step 5:** You can seed the products table with fake data if you want. (To seed successfully, you will need to link your public storage and create a folder named "image" inside that).
 > php artisan db:seed
 
 
