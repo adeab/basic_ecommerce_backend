@@ -26,6 +26,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     'middleware' => ['api','jwt.verify'],
 ], function ($router) {
 
+    //create an order
+    Route::post('order', 'OrderController@store');
     //logout
     Route::post('logout', 'AuthController@logout');
     
@@ -35,4 +37,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     // Route::post('me', 'AuthController@me');
     // Route::get('users', 'UserController@index');
 });
+
+//products
+
+//get products
+Route::get('products', 'ProductController@index');
+//get a single product
+Route::get('product/{slug}', 'ProductController@show');
 

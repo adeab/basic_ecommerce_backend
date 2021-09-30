@@ -15,6 +15,7 @@ class ProductController extends Controller
     public function index()
     {
         //
+        return Product::paginate(10);
     }
 
     /**
@@ -44,9 +45,11 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show($slug)
     {
         //
+        $product = Product::where('slug', $slug)->get()->first();
+        return $product;
     }
 
     /**
